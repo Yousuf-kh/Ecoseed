@@ -50,7 +50,11 @@ const Header = () => {
 						</Box>
 					</Heading>
 
-					<Flex gap={5} align={'center'}>
+					<Flex
+						display={{ base: 'none', md: 'flex' }}
+						gap={5}
+						align={'center'}
+					>
 						{navs.map((c, i) => (
 							<Text cursor={'pointer'} color={'#fff'} key={i}>
 								{c.name}

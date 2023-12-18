@@ -12,13 +12,13 @@ const Catalog = () => {
 	return (
 		<Box w={'full'} py={5} textAlign={'center'}>
 			<Container maxW={'container.xl'}>
-				<Box marginInline={'auto'} w={'60%'}>
+				<Box marginInline={'auto'} w={{ md: '60%', base: '100%' }}>
 					<Heading
 						color={'#2FB95D'}
 						textAlign={'center'}
 						fontFamily={'Bricolage Grotesque'}
-						fontSize={'55px'}
-						lineHeight={'55px'}
+						fontSize={{ md: '55px', base: '30px' }}
+						lineHeight={{ md: '55px', base: '30px' }}
 						pt={5}
 					>
 						Landscape Design <br />
@@ -40,7 +40,13 @@ const Catalog = () => {
 					</Text>
 				</Box>
 
-				<Grid gridTemplateColumns={'repeat(3,1fr)'} gap={10}>
+				<Grid
+					gridTemplateColumns={{
+						md: 'repeat(3,1fr)',
+						base: 'repeat(1,1fr)',
+					}}
+					gap={10}
+				>
 					<Card />
 					<Card />
 					<Card />

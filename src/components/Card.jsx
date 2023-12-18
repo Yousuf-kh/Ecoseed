@@ -8,7 +8,7 @@ const Card = () => {
 			transition={'.4s ease'}
 			_hover={{
 				transform: 'scale(1.1)',
-				boxShadow: '-13px 12px 8px 0px rgba(34, 60, 80, 0.2)',
+				boxShadow: '1px 12px 11px 12px rgba(0, 0, 0, 0.2)',
 			}}
 		>
 			<Image
