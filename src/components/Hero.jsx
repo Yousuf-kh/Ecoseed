@@ -4,71 +4,58 @@ import {
 	Container,
 	Flex,
 	Heading,
+	Image,
 	Text,
 } from '@chakra-ui/react';
 
 const Hero = () => {
 	return (
-		<Box w={'full'} minH={'90vh'} mt={'10vh'} position={'relative'}>
+		<Box w={'full'} minH={{ md: '90vh', base: '' }} mt={2}>
 			<Container maxW={'container.xl'}>
-				<Flex gap={10} align={'center'} h={'90vh'}>
-					<Box
-						w={{ md: '45%', base: '100%' }}
-						backgroundColor={{ base: '#ffffff7c', md: '' }}
-						p={{ md: 0, base: 5 }}
-					>
-						<Heading
-							color={'#043A3A'}
-							fontSize={{ md: '76px', base: '50px' }}
-							lineHeight={{ md: '76px', base: '50px' }}
-							fontFamily={'Bricolage Grotesque'}
-							borderRadius={'10px'}
-							width={'max-content'}
-						>
-							Crafting{' '}
-							<Box as={'span'} color={'#2FB95D'}>
-								Green <br />
-							</Box>{' '}
-							Masterpieces
-						</Heading>
-						<Text fontFamily={'Mulish'} py={5}>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Vivamus hendrerit suscipit egestas. Nunc eget congue
-							ante. Vivamus ut sapien et ex volutpat tincidunt eget at
-							felis vivamus hendrerit suscipit egestas consectetur
-							adipiscing elit.
+				<Flex
+					bgColor={{ md: '#fff', base: '#79d5ee6e' }}
+					borderRadius={'20px'}
+					p={{ md: '', base: 5 }}
+					align={'center'}
+					minH={{ md: '90vh', base: '' }}
+					justify={'space-between'}
+				>
+					<Box w={'55%'}>
+						<Text fontSize={'14px'} color={'#3D3D3D'}>
+							Welcome to GreenShop
 						</Text>
-						<Flex gap={4}>
-							<Button
-								borderRadius={'20px'}
-								p={'20px 35px'}
-								color={'#fff'}
-								bgColor={'#2FB95D'}
-								_hover={{ bg: '#043A3A' }}
-							>
-								Get Started
-							</Button>
-							<Button
-								borderRadius={'20px'}
-								p={'20px 35px'}
-								color={'#fff'}
-								bgColor={'#043A3A'}
-								_hover={{ bg: '#2FB95D' }}
-							>
-								Learn More
-							</Button>
-						</Flex>
+						<Heading
+							fontFamily={'sans-serif'}
+							fontWeight={'800'}
+							fontSize={{ md: '70px', base: '24px' }}
+							color={'#333'}
+							textTransform={'uppercase'}
+						>
+							Let’s Make a <br /> Better{' '}
+							<Box as={'span'} color={'#46A358'}>
+								Planet
+							</Box>
+						</Heading>
+						<Text
+							display={{ md: 'block', base: 'none' }}
+							color={'#727272'}
+							pt={2}
+						>
+							We are an online plant shop offering a wide range of
+							cheap and trendy plants. Use our plants to create an
+							unique Urban Jungle. Order your favorite plants!
+						</Text>
+						<Button
+							bgColor={'#46A358'}
+							mt={{ md: 5, base: 2 }}
+							color={'#fff'}
+						>
+							SHOP NOW
+						</Button>
 					</Box>
-					<Box
-						minW={{ md: '40%', base: '100%' }}
-						h={'90vh'}
-						bgImage={'url(/hero1.png)'}
-						backgroundSize={'cover'}
-						backgroundPosition={'center'}
-						position={'absolute'}
-						right={'0'}
-						zIndex={{ base: '-1' }}
-					></Box>
+					<Box w={'45%'}>
+						<Image src={'/hero.png'} />
+					</Box>
 				</Flex>
 			</Container>
 		</Box>
