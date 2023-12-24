@@ -9,7 +9,12 @@ const Products = () => {
 				<Heading color={'#46A358'} textAlign={'center'} p={5}>
 					All Products
 				</Heading>
-				<Grid gridTemplateColumns={'repeat(4,1fr)'}>
+				<Grid
+					gridTemplateColumns={{
+						md: 'repeat(4,1fr)',
+						base: 'repeat(2,1fr)',
+					}}
+				>
 					{i.map((c, i) => (
 						<Card key={i} />
 					))}
