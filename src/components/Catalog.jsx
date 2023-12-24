@@ -47,9 +47,11 @@ const Catalog = () => {
 								}}
 								gap={5}
 							>
-								<Card />
-								<Card />
-								<Card />
+								{i.map((c, i) => (
+									<Link key={i} to={'/product'}>
+										<Card />
+									</Link>
+								))}
 							</Grid>
 						</TabPanel>
 						<TabPanel>
@@ -60,11 +62,11 @@ const Catalog = () => {
 								}}
 								gap={5}
 							>
-								<Card />
-								<Card />
-								<Card />
-								<Card />
-								<Card />
+								{i.map((c, i) => (
+									<Link key={i} to={'/product'}>
+										<Card />
+									</Link>
+								))}
 							</Grid>
 						</TabPanel>
 					</TabPanels>
