@@ -18,7 +18,7 @@ const Hero = () => {
 					p={{ md: '', base: 5 }}
 					align={'center'}
 					minH={{ md: '90vh', base: '' }}
-					justify={'space-between'}
+					justifyContent={'space-between'}
 				>
 					<Box w={'55%'}>
 						<Text fontSize={'14px'} color={'#3D3D3D'}>
