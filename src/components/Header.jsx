@@ -64,9 +64,7 @@ const Header = () => {
 						onClick={onOpen}
 						cursor={'pointer'}
 					>
-						<Link to={'/'}>
-							<Image src='/logo.png' w={'100px'} />
-						</Link>
+						<Image src='/logo.png' w={'100px'} />
 					</Box>
 
 					<Drawer
