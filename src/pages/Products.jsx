@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Heading } from '@chakra-ui/react';
 import Card from '../components/Card';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
 	const i = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -16,7 +17,9 @@ const Products = () => {
 					}}
 				>
 					{i.map((c, i) => (
-						<Card key={i} />
+						<Link key={i} to={'/product'}>
+							<Card />
+						</Link>
 					))}
 				</Grid>
 			</Container>
