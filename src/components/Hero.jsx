@@ -10,7 +10,11 @@ import {
 
 const Hero = () => {
 	return (
-		<Box w={'full'} minH={{ md: '90vh', base: '' }} mt={2}>
+		<Box
+			w={'full'}
+			minH={{ md: '90vh', base: '' }}
+			mt={{ md: 2, base: '70px' }}
+		>
 			<Container maxW={'container.xl'}>
 				<Flex
 					bgColor={{ md: '#fff', base: '#79d5ee6e' }}

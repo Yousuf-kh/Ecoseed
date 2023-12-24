@@ -31,10 +31,17 @@ const Header = () => {
 		},
 	];
 	return (
-		<Box w={'full'} h={'10vh'}>
+		<Box
+			w={'full'}
+			bg={'#fff'}
+			position={'fixed'}
+			top={0}
+			zIndex={'99'}
+			boxShadow={'-1px 14px 20px 0px rgba(0, 0, 0, 0.2)'}
+		>
 			<Container maxW={'container.xl'} bgColor={'#fff'}>
 				<Flex align={'center'} justify={'space-between'}>
-					<Image src='/logo.png' w={'120px'} />
+					<Image src='/logo.png' w={{ md: '120px', base: '100px' }} />
 
 					<Flex display={{ md: 'flex', base: 'none' }} gap={7}>
 						{navs.map((c, i) => (
