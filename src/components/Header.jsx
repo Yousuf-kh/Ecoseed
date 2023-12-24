@@ -8,7 +8,14 @@ import {
 	MenuButton,
 	MenuList,
 	MenuItem,
+	Drawer,
+	DrawerOverlay,
+	DrawerContent,
+	DrawerHeader,
+	DrawerBody,
+	useDisclosure,
 } from '@chakra-ui/react';
+import { useState } from 'react';
 import { IoLanguageSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
@@ -31,6 +38,10 @@ const Header = () => {
 			path: '#about',
 		},
 	];
+
+	const { isOpen, onOpen, onClose } = useDisclosure();
+	const [placement, setPlacement] = useState('left');
+
 	return (
 		<Box
 			w={'full'}
@@ -42,17 +53,51 @@ const Header = () => {
 		>
 			<Container maxW={'container.xl'} bgColor={'#fff'}>
 				<Flex align={'center'} justify={'space-between'}>
-					<Link to={'/'}>
-						<Image
-							src='/logo.png'
-							w={{ md: '120px', base: '100px' }}
-						/>
-					</Link>
+					<Box display={{ md: 'block', base: 'none' }}>
+						<Link to={'/'}>
+							<Image src='/logo.png' w={'120px'} />
+						</Link>
+					</Box>
+
+					<Box
+						display={{ md: 'none', base: 'block' }}
+						onClick={onOpen}
+						cursor={'pointer'}
+					>
+						<Link to={'/'}>
+							<Image src='/logo.png' w={'100px'} />
+						</Link>
+					</Box>
+
+					<Drawer
+						placement={placement}
+						onClose={onClose}
+						isOpen={isOpen}
+					>
+						<DrawerOverlay />
+						<DrawerContent>
+							<DrawerBody>
+								{navs.map((c, i) => (
+									<Link to={c.path} cursor={'pointer'} key={i}>
+										<Text
+											py={5}
+											textAlign={'center'}
+											bgColor={'gray.100'}
+											borderRadius={'10px'}
+											my={2}
+										>
+											{c.name}
+										</Text>
+									</Link>
+								))}
+							</DrawerBody>
+						</DrawerContent>
+					</Drawer>
 
 					<Flex display={{ md: 'flex', base: 'none' }} gap={7}>
 						{navs.map((c, i) => (
 							<Link to={c.path} cursor={'pointer'} key={i}>
-								{c.name}
+								<Text>{c.name}</Text>
 							</Link>
 						))}
 					</Flex>
