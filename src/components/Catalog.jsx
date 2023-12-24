@@ -9,6 +9,7 @@ import {
 	Grid,
 } from '@chakra-ui/react';
 import Card from './Card';
+import { Link } from 'react-router-dom';
 
 const Catalog = () => {
 	const i = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -32,7 +33,9 @@ const Catalog = () => {
 								gap={5}
 							>
 								{i.map((c, i) => (
-									<Card w={''} key={i} />
+									<Link key={i} to={'/product'}>
+										<Card />
+									</Link>
 								))}
 							</Grid>
 						</TabPanel>

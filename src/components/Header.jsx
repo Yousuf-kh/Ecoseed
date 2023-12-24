@@ -10,12 +10,13 @@ import {
 	MenuItem,
 } from '@chakra-ui/react';
 import { IoLanguageSharp } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 	const navs = [
 		{
 			name: 'Home',
-			path: '/home',
+			path: '/',
 		},
 		{
 			name: 'Catalog',
@@ -23,11 +24,11 @@ const Header = () => {
 		},
 		{
 			name: 'About',
-			path: '/about',
+			path: '#about',
 		},
 		{
 			name: 'Contact',
-			path: '/contact',
+			path: '#about',
 		},
 	];
 	return (
@@ -41,13 +42,18 @@ const Header = () => {
 		>
 			<Container maxW={'container.xl'} bgColor={'#fff'}>
 				<Flex align={'center'} justify={'space-between'}>
-					<Image src='/logo.png' w={{ md: '120px', base: '100px' }} />
+					<Link to={'/'}>
+						<Image
+							src='/logo.png'
+							w={{ md: '120px', base: '100px' }}
+						/>
+					</Link>
 
 					<Flex display={{ md: 'flex', base: 'none' }} gap={7}>
 						{navs.map((c, i) => (
-							<Text cursor={'pointer'} key={i}>
+							<Link to={c.path} cursor={'pointer'} key={i}>
 								{c.name}
-							</Text>
+							</Link>
 						))}
 					</Flex>
 
