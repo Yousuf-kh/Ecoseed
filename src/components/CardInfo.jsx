@@ -7,6 +7,8 @@ const CardInfo = () => {
 			<Container maxW={'container.lg'}>
 				<Card />
 				<Heading color={'#46A358'}>Name of Tovar</Heading>
+				<Text color={'gray.500'}>Lorem ipsum dolor sit amet.</Text>
+				<br />
 				<Text>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Doloribus quo sed dignissimos eum excepturi aliquam omnis

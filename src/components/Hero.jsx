@@ -4,7 +4,6 @@ import {
 	Container,
 	Flex,
 	Heading,
-	Image,
 	Text,
 } from '@chakra-ui/react';
 
@@ -57,9 +56,9 @@ const Hero = () => {
 							SHOP NOW
 						</Button>
 					</Box>
-					<Box w={'45%'}>
+					{/* <Box w={'45%'}>
 						<Image src={'/hero.png'} />
-					</Box>
+					</Box> */}
 				</Flex>
 			</Container>
 		</Box>

@@ -11,7 +11,6 @@ import {
 	Drawer,
 	DrawerOverlay,
 	DrawerContent,
-	DrawerHeader,
 	DrawerBody,
 	useDisclosure,
 } from '@chakra-ui/react';
@@ -31,11 +30,11 @@ const Header = () => {
 		},
 		{
 			name: 'About',
-			path: '#about',
+			path: '/#about',
 		},
 		{
 			name: 'Contact',
-			path: '#about',
+			path: '/#contact',
 		},
 	];
 
@@ -50,12 +49,14 @@ const Header = () => {
 			top={0}
 			zIndex={'99'}
 			boxShadow={'-1px 14px 20px 0px rgba(0, 0, 0, 0.2)'}
+			bgColor={'#fff'}
+			py={2}
 		>
-			<Container maxW={'container.xl'} bgColor={'#fff'}>
+			<Container maxW={'container.xl'}>
 				<Flex align={'center'} justify={'space-between'}>
 					<Box display={{ md: 'block', base: 'none' }}>
 						<Link to={'/'}>
-							<Image src='/logo.png' w={'120px'} />
+							<Image src='/logo.jpg' w={'100px'} />
 						</Link>
 					</Box>
 
@@ -64,7 +65,7 @@ const Header = () => {
 						onClick={onOpen}
 						cursor={'pointer'}
 					>
-						<Image src='/logo.png' w={'100px'} />
+						<Image src='/logo.jpg' w={'80px'} />
 					</Box>
 
 					<Drawer
@@ -73,6 +74,7 @@ const Header = () => {
 						isOpen={isOpen}
 					>
 						<DrawerOverlay />
+
 						<DrawerContent>
 							<DrawerBody>
 								{navs.map((c, i) => (
@@ -83,6 +85,7 @@ const Header = () => {
 											bgColor={'gray.100'}
 											borderRadius={'10px'}
 											my={2}
+											onClick={onClose}
 										>
 											{c.name}
 										</Text>
