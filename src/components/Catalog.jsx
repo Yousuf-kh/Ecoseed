@@ -19,8 +19,8 @@ const Catalog = () => {
 			<Container maxW={'container.xl'}>
 				<Tabs color={'green'}>
 					<TabList color={'green'}>
-						<Tab color={'green'}>One</Tab>
-						<Tab color={'green'}>Two</Tab>
+						<Tab color={'green'}>Category First</Tab>
+						<Tab color={'green'}>Category Second</Tab>
 					</TabList>
 
 					<TabPanels>
