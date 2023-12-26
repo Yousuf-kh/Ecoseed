@@ -23,7 +23,7 @@ const Hero = () => {
 					minH={{ md: '90vh', base: '' }}
 					justifyContent={'space-between'}
 				>
-					<Box w={'55%'}>
+					<Box w={{ md: '55%', base: '60%' }}>
 						<Text fontSize={'14px'} color={'#3D3D3D'}>
 							Welcome to GreenShop
 						</Text>
