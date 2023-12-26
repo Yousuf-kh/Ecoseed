@@ -12,8 +12,8 @@ const Products = () => {
 				</Heading>
 				<Grid
 					gridTemplateColumns={{
-						md: 'repeat(4,1fr)',
-						base: 'repeat(2,1fr)',
+						md: 'repeat(3,1fr)',
+						base: 'repeat(1,1fr)',
 					}}
 				>
 					{gardens.map((c, i) => (
